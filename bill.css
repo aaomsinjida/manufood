@@ -32,26 +32,23 @@ body {
     margin-bottom: 10px;
 }
 
+.menu {
+    display: grid;
+    grid-template-columns: 80px 1fr 100px;
+    grid-gap: 5px;
+}
+
 .menu-item {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 500px 2fr 100px;
     align-items: center;
-    margin-bottom: 5px;
-    text-align: left
 }
 
-.menu-item .item-quantity {
-    flex: 0 0 10%;
-    text-align: left;
+.item-quantity, .item-price {
+    text-align: center;
 }
 
-.menu-item .item-name {
-    flex: 2;
-    text-align: right;
-}
-
-.menu-item .item-price {
-    flex: 0 0 15%;
+.item-quantity {
     text-align: right;
 }
 
