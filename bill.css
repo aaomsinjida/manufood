@@ -3,9 +3,9 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    width: 80mm;
+    padding: 10mm;
+    border: 1px solid black;
     border: 1px solid #000;
     border-radius: 10px;
     background-color: #f9f9f9;
@@ -16,11 +16,13 @@ body {
 }
 
 .header h1 {
-    margin-bottom: 5px;
+    margin-bottom: 5 px;
+    font-size: 18px;
 }
 
 .header p {
     margin: 5px 0;
+    font-size: 14px;
 }
 
 .order-details {
@@ -30,6 +32,7 @@ body {
 .order-details h2 {
     text-align: center;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .menu {
@@ -40,8 +43,13 @@ body {
 
 .menu-item {
     display: grid;
-    grid-template-columns: 500px 2fr 100px;
+    grid-template-columns: 230px 1fr 50px;
     align-items: center;
+    text-align: left;
+}
+
+.menu-item span {
+    font-size: 12px; /* ปรับขนาดตัวอักษร */
 }
 
 .item-quantity, .item-price {
@@ -54,11 +62,14 @@ body {
 
 .total {
     text-align: right;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-right: 0px; 
 }
 
 .total p {
     margin: 5px 0;
+    font-size: 11px;
+
 }
 
 .footer {
