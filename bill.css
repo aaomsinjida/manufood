@@ -37,12 +37,24 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
+    text-align: left
 }
 
-.menu-item span {
+.menu-item .item-quantity {
+    flex: 1;
+    text-align: left;
+}
+
+.menu-item .item-name {
+    flex: 2;
+    text-align: right;
+}
+
+.menu-item .item-price {
     flex: 1;
     text-align: right;
 }
+
 
 .total {
     text-align: right;
