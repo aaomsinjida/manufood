@@ -41,7 +41,7 @@ body {
 }
 
 .menu-item .item-quantity {
-    flex: 1;
+    flex: 0 0 10%;
     text-align: left;
 }
 
@@ -51,10 +51,9 @@ body {
 }
 
 .menu-item .item-price {
-    flex: 1;
+    flex: 0 0 15%;
     text-align: right;
 }
-
 
 .total {
     text-align: right;
