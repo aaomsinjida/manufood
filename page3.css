@@ -1,0 +1,406 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+ 
+  .container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin-top: 140px;
+    margin-bottom: 50px;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 45px;
+    left: 50%; /* กำหนดให้ตำแหน่งตรงกลางแนวนอน */
+    transform: translateX(-50%); /* ย้ายตำแหน่งกล่องอยู่กึ่งกลางแนวนอน */
+    font-size: 40px;
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #ffffff;
+ 
+  }
+  
+  .box {
+    margin-right: auto; /* ตั้งค่า margin-right เป็น auto เพื่อช่วยย้ายกล่องไปอยู่ด้านซ้าย */
+    margin-bottom: 0px;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid #ff2200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 20vw; 
+    height: 10vh;
+    font-size: 2vw; 
+    color: #000000;
+    text-align: center;
+    border-radius: 2vw; 
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    align-self: flex-start; 
+    }
+  .box1 {
+    margin-right: auto; /* ตั้งค่า margin-right เป็น auto เพื่อช่วยย้ายกล่องไปอยู่ด้านซ้าย */
+    margin-bottom: 0px;
+    background-image: linear-gradient(to right, #ff2200, #ff7b00);
+    border: 5px solid #ff2200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 20vw; 
+    height: 10vh;
+    font-size: 2vw; 
+    color: #ffffff;
+    text-align: center;
+    border-radius: 2vw; 
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    align-self: flex-start; 
+  }
+
+  .box:hover {
+    background-color: rgb(255, 220, 0);
+  }
+  
+  .home {
+    margin-top: 10px;
+    display: flex; /* ใช้ Flexbox */
+    margin-right: 80%;
+    font-size: 30px;
+    font-family: Impact, fantasy;
+    font-weight: 100;
+    color: #ffffff;
+
+  }
+
+  .box3 {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-image: linear-gradient(to right, #ff2200, #ff7b00);
+    border: 5px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 14vw; 
+    height: 7vh;
+    font-size: 2.2vw; 
+    color: #ffffff;
+    text-align: center;
+    border-radius: 2vw; 
+    font-family: Impact, fantasy;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .cart-icon {
+    margin-right: 0.5vw; /* ปรับช่องว่างระหว่างภาพกับข้อความ */
+    height: 2em; /* ปรับขนาดของภาพให้เข้ากับข้อความ */
+  }
+
+  .box3:hover {
+    background-color: rgb(255, 220, 0);
+  }
+  
+  .box4 {
+    position: absolute;
+    top: 19vh;
+    right: 5vw;
+    background-color: #ffffff;
+    border: 5px solid #ffffff;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 65vw; 
+    height: 10vh;
+    font-size: 2vw; 
+    color: #ff2200;
+    text-align: cente; 
+    border-radius: 2vw; 
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    padding: 1vw; 
+  }
+
+  .box4::before {
+    content: '';
+    position: absolute;
+    top: 0vh;
+    right: 0vw;
+    width: 70%;
+    height: 100%; 
+    background-image: linear-gradient(to right, #f9ef81, #f59942);
+    pointer-events: none; 
+    border-top-left-radius: 2vw; 
+    border-top-right-radius: 2vw; 
+    border-bottom-left-radius: 2vw; 
+    border-bottom-right-radius: 2vw; 
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-left: -5vw; /* ใช้ vw แทน px */
+    margin-top: -1vw; 
+  }
+
+  .text1 {
+      display:block;
+      padding-left: 1.5vw; /* ใช้ vw แทน px */
+  }
+
+  .text2 {
+      display: block;
+      padding-left: 1.5vw; /* ใช้ vw แทน px */
+  }
+
+  .text3 {
+      display: block;
+      padding-left:1.5vw; /* ใช้ vw แทน px */
+  }
+
+  .box5 {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    background-image: linear-gradient(to right, #fff200, #ff7b00);
+    border: 5px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 12vw; 
+    height: 7vh;
+    font-size: 2.2vw; 
+    color: #ffffff;
+    text-align: center;
+    border-radius: 2vw; 
+    font-family: Impact, fantasy;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .sp1,.sp4 ,.sp7,.sp10,.sp13{
+    display: block;
+    margin-top: -8.5vw;
+    margin-left: 20vw;
+    z-index: 9999;
+    height: 4em;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .sp2,.sp5,.sp8,.sp11,.sp14 {
+    display: block;
+    margin-top: -6.6vw; 
+    margin-left: 30vw; /* ใช้ vw แทน px */
+    z-index: 9999; 
+    height: 10em;;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .sp3,.sp6,.sp9,.sp12,.sp15 {
+    display: block;
+    margin-top: -7.3vw; 
+    margin-left: 40vw; /* ใช้ vw แทน px */
+    z-index: 9999; 
+    height: 100em;;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+
+  .box6 {
+    position: absolute;
+    top: 35vh;
+    right: 5vw;
+    background-color: #ffffff;
+    border: 5px solid #ffffff;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 65vw; 
+    height: 10vh;
+    font-size: 2vw; 
+    color: #ff2200;
+    text-align: cente; 
+    border-radius: 2vw; 
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    padding: 1vw; 
+  }
+
+  .box6::before {
+    content: '';
+    position: absolute;
+    top: 0vh;
+    right: 0vw;
+    width: 70%;
+    height: 100%; 
+    background-image: linear-gradient(to right, #f9ef81, #f59942);
+    pointer-events: none; 
+    border-top-left-radius: 2vw; 
+    border-top-right-radius: 2vw; 
+    border-bottom-left-radius: 2vw; 
+    border-bottom-right-radius: 2vw; 
+  }
+
+  .box7 {
+    position: absolute;
+    top: 51vh;
+    right: 5vw;
+    background-color: #ffffff;
+    border: 5px solid #ffffff;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 65vw; 
+    height: 10vh;
+    font-size: 2vw; 
+    color: #ff2200;
+    text-align: cente; 
+    border-radius: 2vw; 
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    padding: 1vw; 
+  }
+
+  .box7::before {
+    content: '';
+    position: absolute;
+    top: 0vh;
+    right: 0vw;
+    width: 70%;
+    height: 100%; 
+    background-image: linear-gradient(to right, #f9ef81, #f59942);
+    pointer-events: none; 
+    border-top-left-radius: 2vw; 
+    border-top-right-radius: 2vw; 
+    border-bottom-left-radius: 2vw; 
+    border-bottom-right-radius: 2vw; 
+  }
+
+  .box8 {
+    position: absolute;
+    top: 67vh;
+    right: 5vw;
+    background-color: #ffffff;
+    border: 5px solid #ffffff;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 65vw; 
+    height: 10vh;
+    font-size: 2vw; 
+    color: #ff2200;
+    text-align: cente; 
+    border-radius: 2vw; 
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    padding: 1vw; 
+  }
+
+  .box8::before {
+    content: '';
+    position: absolute;
+    top: 0vh;
+    right: 0vw;
+    width: 70%;
+    height: 100%; 
+    background-image: linear-gradient(to right, #f9ef81, #f59942);
+    pointer-events: none; 
+    border-top-left-radius: 2vw; 
+    border-top-right-radius: 2vw; 
+    border-bottom-left-radius: 2vw; 
+    border-bottom-right-radius: 2vw; 
+  }
+
+  .box9 {
+    position: absolute;
+    top: 83vh;
+    right: 5vw;
+    background-color: #ffffff;
+    border: 5px solid #ffffff;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 65vw; 
+    height: 10vh;
+    font-size: 2vw; 
+    color: #ff2200;
+    text-align: cente; 
+    border-radius: 2vw; 
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    padding: 1vw; 
+  }
+
+  .box9::before {
+    content: '';
+    position: absolute;
+    top: 0vh;
+    right: 0vw;
+    width: 70%;
+    height: 100%; 
+    background-image: linear-gradient(to right, #f9ef81, #f59942);
+    pointer-events: none; 
+    border-top-left-radius: 2vw; 
+    border-top-right-radius: 2vw; 
+    border-bottom-left-radius: 2vw; 
+    border-bottom-right-radius: 2vw; 
+  }
+  
+  .selected {
+    border: 5px solid red; /* ปรับความหนาและสีของกรอบตามต้องการ */
+  }
+  

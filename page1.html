@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page 1</title>
+<link rel="stylesheet" href="page1.css"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="menu">กะเพรา 打拋</div>
+    <div class="box1">กะเพรา 打拋</div>
+    <a href="page2.html" class="box">ผัดไทย 河粉</a>
+    <a href="page3.html" class="box">ข้าวผัด 炒飯</a>
+    <a href="page4.html" class="box">น้ำซุป 湯</a>
+    <a href="page5.html" class="box">ผัด/ทอด 熱炒</a>
+    <a href="page6.html" class="box">ยำ 涼拌</a>
+    <a href="page7.html" class="box">อื่นๆ 其他</a>
+    <a href="index.html" class="home">H O M E</a>
+    <a href="item.html" class="box3">
+        <img src="cart.png" alt="Cart" class="cart-icon">
+        <span class="box-text">I T E M</span>
+    </a>
+
+    <div class="box4">
+        <div class="text-container"></div>
+        <span class="text1">กะเพราหมูราดข้าว</span>
+        <span class="text2">打拋豬蓋飯</span>
+        <span class="text3">Price : 120</span>
+        <div class="sp1" id="sp1" onclick="selectIcon('sp1')">
+            <img src="sp1.png" class="sp1-icon">
+        </div>
+        <div class="sp2" id="sp2" onclick="selectIcon('sp2')">
+            <img src="sp2.png" class="sp2-icon">
+        </div>
+        <div class="sp3" id="sp3" onclick="selectIcon('sp3')">
+            <img src="sp3.png" class="sp3-icon">
+        </div>
+        <a class="box5" id="add-button" onclick="addToCart()">
+            <img src="cart.png" alt="Cart" class="cart-icon">
+            <span class="box-text">A D D</span>
+        </a>
+    </div>
+    
+    <div class="box6">
+        <div class="text-container"></div>
+            <span class="text1">กะเพราไก่ราดข้าว</span>
+            <span class="text2">打拋雞蓋飯</span>
+            <span class="text3">Price : 120</span>
+            <div class="sp4" id="sp4" onclick="selectIcon2('sp4')">
+                <img src="sp1.png" class="sp4-icon">
+            </div>
+            <div class="sp5" id="sp5" onclick="selectIcon2('sp5')">
+                <img src="sp2.png" class="sp5-icon">
+            </div>
+            <div class="sp6" id="sp6" onclick="selectIcon2('sp6')">
+                <img src="sp3.png" class="sp6-icon">
+            </div>
+            <a class="box5" id="add-button"onclick="addToCart2()">
+                <img src="cart.png" alt="Cart" class="cart-icon">
+                <span class="box-text">A D D</span>
+            </a> 
+        </div>
+    </div>
+    
+    <div class="box7">
+        <div class="text-container"></div>
+            <span class="text1">กะเพรากุ้งราดข้าว</span>
+            <span class="text2">打拋蝦蓋飯</span>
+            <span class="text3">Price : 130</span>
+            <div class="sp7" id="sp7" onclick="selectIcon3('sp7')">
+                <img src="sp1.png" class="sp7-icon">
+            </div>
+            <div class="sp8" id="sp8" onclick="selectIcon3('sp8')">
+                <img src="sp2.png" class="sp8-icon">
+            </div>
+            <div class="sp9" id="sp9" onclick="selectIcon3('sp9')">
+                <img src="sp3.png" class="sp9-icon">
+            </div>
+            <a class="box5" id="add-button"onclick="addToCart3()">
+                <img src="cart.png" alt="Cart" class="cart-icon">
+                <span class="box-text">A D D</span>
+            </a> 
+        </div>
+
+    <div class="box8">
+        <div class="text-container"></div>
+            <span class="text1">กะเพราทะเลราดข้าว</span>
+            <span class="text2">打拋海鮮蓋飯</span>
+            <span class="text3">Price : 130</span>
+            <div class="sp10" id="sp10" onclick="selectIcon4('sp10')">
+                <img src="sp1.png" class="sp10-icon">
+            </div>
+            <div class="sp11" id="sp11" onclick="selectIcon4('sp11')">
+                <img src="sp2.png" class="sp11-icon">
+            </div>
+            <div class="sp12" id="sp12" onclick="selectIcon4('sp12')">
+                <img src="sp3.png" class="sp12-icon">
+            </div>
+            <a class="box5" id="add-button"onclick="addToCart4()">
+                <img src="cart.png" alt="Cart" class="cart-icon">
+                <span class="box-text">A D D</span>
+            </a> 
+        </div>
+
+    <div class="box9">
+        <div class="text-container"></div>
+            <span class="text1">กะเพรา กับข้าว</span>
+            <span class="text2">打拋單點</span>
+            <span class="text3">Price : 150</span>
+        <div class="sp13" id="sp13" onclick="selectIcon5('sp13')">
+            <img src="sp1.png" class="sp13-icon">
+        </div>
+        <div class="sp14" id="sp14" onclick="selectIcon5('sp14')">
+            <img src="sp2.png" class="sp14-icon">
+        </div>
+        <div class="sp15" id="sp15" onclick="selectIcon5('sp15')">
+            <img src="sp3.png" class="sp15-icon">
+        </div>
+        <a class="box5" id="add-button"onclick="addToCart5()">
+            <img src="cart.png" alt="Cart" class="cart-icon">
+            <span class="box-text">A D D</span>
+        </a> 
+    </div>
+</div>
+
+<script>
+    function selectIcon(id) {
+            if (id === 'sp1' || id === 'sp2' || id === 'sp3') {
+                if (document.getElementById(id).classList.contains('selected')) {
+                    document.getElementById(id).classList.remove('selected');
+                } else {
+                    document.getElementById(id).classList.add('selected');
+
+                    var buttons = document.querySelectorAll('.sp1, .sp2, .sp3');
+                    for (var i = 0; i < buttons.length; i++) {
+                        if (buttons[i].id !== id) {
+                            buttons[i].classList.remove('selected');
+                        }
+                    }
+                }
+
+                var data = {
+                    id: id,
+                    text1: document.querySelector('.text1').textContent,
+                    text2: document.querySelector('.text2').textContent,
+                    text3: document.querySelector('.text3').textContent
+                };
+                switch (id) {
+                    case 'sp1':
+                        data.text1 = "กะเพราหมูราดข้าวเผ็ดน้อย";
+                        break;
+                    case 'sp2':
+                        data.text1 = "กะเพราหมูราดข้าวเผ็ดกลาง";
+                        break;
+                    case 'sp3':
+                        data.text1 = "กะเพราหมูราดข้าวเผ็ดมาก";
+                        break;
+                }
+            }
+        }
+
+        function addToCart() {
+            var selectedText = "";
+
+            if (document.getElementById('sp1').classList.contains('selected')) {
+                selectedText = "กะเพราหมูราดข้าว 打拋豬蓋飯 (เผ็ดน้อย)";
+            } else if (document.getElementById('sp2').classList.contains('selected')) {
+                selectedText = "กะเพราหมูราดข้าว 打拋豬蓋飯 (เผ็ดกลาง)";
+            } else if (document.getElementById('sp3').classList.contains('selected')) {
+                selectedText = "กะเพราหมูราดข้าว 打拋豬蓋飯 (เผ็ดมาก)";
+            } else if (!document.getElementById('sp1').classList.contains('selected') && 
+                       !document.getElementById('sp2').classList.contains('selected') && 
+                       !document.getElementById('sp3').classList.contains('selected')) {
+                selectedText = "กะเพราหมูราดข้าว 打拋豬蓋飯";
+            }
+
+            var data = {
+                text1: selectedText,
+                quantity: 1,
+                price: 120
+            };
+
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var itemExists = false;
+
+            for (var i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].text1 === data.text1) {
+                    cartItems[i].quantity += 1;
+                    cartItems[i].price += 120;
+                    itemExists = true;
+                    break;
+                }
+            }
+
+            if (!itemExists) {
+                cartItems.push(data);
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            console.log('Item added to cart:', selectedText);
+
+            // Remove red border
+            var buttons = document.querySelectorAll('.sp1, .sp2, .sp3');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('selected');
+            }
+        }
+    function selectIcon2(id) {
+        if (id === 'sp4' || id === 'sp5' || id === 'sp6') {
+            if (document.getElementById(id).classList.contains('selected')) {
+                document.getElementById(id).classList.remove('selected');
+            } else {
+            document.getElementById(id).classList.add('selected');
+            var buttons = document.querySelectorAll('.sp4, .sp5, .sp6');
+                    for (var i = 0; i < buttons.length; i++) {
+                        if (buttons[i].id !== id) {
+                            buttons[i].classList.remove('selected');
+                        }
+                    }
+                }
+            }
+        
+        var data = {
+        id: id,
+        text1: document.querySelector('.text1').textContent,
+        text2: document.querySelector('.text2').textContent,
+        text3: document.querySelector('.text3').textContent
+      };
+      // ปรับแต่งข้อมูล "text1" สำหรับ SP1
+      switch (id) {
+        case 'sp4':
+          data.text1 = "กะเพราไก่ราดข้าวเผ็ดน้อย";
+          break;
+        case 'sp5':
+          data.text1 = "กะเพราไก่ราดข้าวเผ็ดกลาง";
+          break;
+        case 'sp6':
+          data.text1 = "กะเพราไก่ราดข้าวเผ็ดมาก";
+          break;
+      }
+    }
+    function addToCart2() {
+            var selectedText = "";
+
+            if (document.getElementById('sp4').classList.contains('selected')) {
+                selectedText = "กะเพราไก่ราดข้าว 打拋雞蓋飯 (เผ็ดน้อย)";
+            } else if (document.getElementById('sp5').classList.contains('selected')) {
+                selectedText = "กะเพราไก่ราดข้าว 打拋雞蓋飯 (เผ็ดกลาง)";
+            } else if (document.getElementById('sp6').classList.contains('selected')) {
+                selectedText = "กะเพราไก่ราดข้าว 打拋雞蓋飯 (เผ็ดมาก)";
+            } else if (!document.getElementById('sp4').classList.contains('selected') && 
+                       !document.getElementById('sp5').classList.contains('selected') && 
+                       !document.getElementById('sp6').classList.contains('selected')) {
+                selectedText = "กะเพราไก่ราดข้าว 打拋雞蓋飯";
+            }
+
+            var data = {
+                text1: selectedText,
+                quantity: 1,
+                price: 120
+            };
+
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var itemExists = false;
+
+            for (var i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].text1 === data.text1) {
+                    cartItems[i].quantity += 1;
+                    cartItems[i].price += 120;
+                    itemExists = true;
+                    break;
+                }
+            }
+
+            if (!itemExists) {
+                cartItems.push(data);
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            console.log('Item added to cart:', selectedText);
+
+            // Remove red border
+            var buttons = document.querySelectorAll('.sp4, .sp5, .sp6');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('selected');
+            }
+        }
+
+    function selectIcon3(id) {
+        if (id === 'sp7' || id === 'sp8' || id === 'sp9') {
+            if (document.getElementById(id).classList.contains('selected')) {
+            document.getElementById(id).classList.remove('selected');
+            } else {
+            document.getElementById(id).classList.add('selected');
+            var buttons = document.querySelectorAll('.sp7, .sp8, .sp9');
+                    for (var i = 0; i < buttons.length; i++) {
+                        if (buttons[i].id !== id) {
+                            buttons[i].classList.remove('selected');
+                        }
+                    }
+                }
+        }
+        
+        var data = {
+        id: id,
+        text1: document.querySelector('.text1').textContent,
+        text2: document.querySelector('.text2').textContent,
+        text3: document.querySelector('.text3').textContent
+      };
+
+      switch (id) {
+        case 'sp7':
+          data.text1 = "กะเพรากุ้งราดข้าวเผ็ดน้อย";
+          break;
+        case 'sp8':
+          data.text1 = "กะเพรากุ้งราดข้าวเผ็ดกลาง";
+          break;
+        case 'sp9':
+          data.text1 = "กะเพรากุ้งราดข้าวเผ็ดมาก";
+          break;
+      }
+    }
+    function addToCart3() {
+            var selectedText = "";
+
+            if (document.getElementById('sp7').classList.contains('selected')) {
+                selectedText = "กะเพรากุ้งราดข้าว 打拋蝦蓋飯 (เผ็ดน้อย)";
+            } else if (document.getElementById('sp8').classList.contains('selected')) {
+                selectedText = "กะเพรากุ้งราดข้าว 打拋蝦蓋飯 (เผ็ดกลาง)";
+            } else if (document.getElementById('sp9').classList.contains('selected')) {
+                selectedText = "กะเพรากุ้งราดข้าว 打拋蝦蓋飯 (เผ็ดมาก)";
+            } else if (!document.getElementById('sp7').classList.contains('selected') && 
+                       !document.getElementById('sp8').classList.contains('selected') && 
+                       !document.getElementById('sp9').classList.contains('selected')) {
+                selectedText = "กะเพรากุ้งราดข้าว 打拋蝦蓋飯";
+            }
+
+            var data = {
+                text1: selectedText,
+                quantity: 1,
+                price: 130
+            };
+
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var itemExists = false;
+
+            for (var i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].text1 === data.text1) {
+                    cartItems[i].quantity += 1;
+                    cartItems[i].price += 130;
+                    itemExists = true;
+                    break;
+                }
+            }
+
+            if (!itemExists) {
+                cartItems.push(data);
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            console.log('Item added to cart:', selectedText);
+
+            // Remove red border
+            var buttons = document.querySelectorAll('.sp7, .sp8, .sp9');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('selected');
+            }
+        }
+
+    function selectIcon4(id) {
+        if (id === 'sp10' || id === 'sp11' || id === 'sp12') {
+            if (document.getElementById(id).classList.contains('selected')) {
+            document.getElementById(id).classList.remove('selected');
+            } else {
+            document.getElementById(id).classList.add('selected');
+            var buttons = document.querySelectorAll('.sp10, .sp11, .sp12');
+                    for (var i = 0; i < buttons.length; i++) {
+                        if (buttons[i].id !== id) {
+                            buttons[i].classList.remove('selected');
+                        }
+                    }
+                }
+        }
+        
+        var data = {
+        id: id,
+        text1: document.querySelector('.text1').textContent,
+        text2: document.querySelector('.text2').textContent,
+        text3: document.querySelector('.text3').textContent
+      };
+      switch (id) {
+        case 'sp10':
+          data.text1 = "กะเพราทะเลราดข้าวเผ็ดน้อย";
+          break;
+        case 'sp11':
+          data.text1 = "กะเพราทะเลราดข้าวเผ็ดกลาง";
+          break;
+        case 'sp12':
+          data.text1 = "กะเพราทะเลราดข้าวเผ็ดมาก";
+          break;
+      }
+    }
+    function addToCart4() {
+            var selectedText = "";
+
+            if (document.getElementById('sp10').classList.contains('selected')) {
+                selectedText = "กะเพราทะเลราดข้าว 打拋海鮮蓋飯 (เผ็ดน้อย)";
+            } else if (document.getElementById('sp11').classList.contains('selected')) {
+                selectedText = "กะเพราทะเลราดข้าว 打拋海鮮蓋飯 (เผ็ดกลาง)";
+            } else if (document.getElementById('sp12').classList.contains('selected')) {
+                selectedText = "กะเพราทะเลราดข้าว 打拋海鮮蓋飯 (เผ็ดมาก)";
+            } else if (!document.getElementById('sp10').classList.contains('selected') && 
+                       !document.getElementById('sp11').classList.contains('selected') && 
+                       !document.getElementById('sp12').classList.contains('selected')) {
+                selectedText = "กะเพราทะเลราดข้าว 打拋海鮮蓋飯";
+            }
+
+            var data = {
+                text1: selectedText,
+                quantity: 1,
+                price: 130
+            };
+
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var itemExists = false;
+
+            for (var i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].text1 === data.text1) {
+                    cartItems[i].quantity += 1;
+                    cartItems[i].price += 130;
+                    itemExists = true;
+                    break;
+                }
+            }
+
+            if (!itemExists) {
+                cartItems.push(data);
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            console.log('Item added to cart:', selectedText);
+
+            // Remove red border
+            var buttons = document.querySelectorAll('.sp10, .sp11, .sp12');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('selected');
+            }
+        }
+
+    function selectIcon5(id) {
+        if (id === 'sp13' || id === 'sp14' || id === 'sp15') {
+            if (document.getElementById(id).classList.contains('selected')) {
+            document.getElementById(id).classList.remove('selected');
+            } else {
+            document.getElementById(id).classList.add('selected');
+            var buttons = document.querySelectorAll('.sp13, .sp14, .sp15');
+                    for (var i = 0; i < buttons.length; i++) {
+                        if (buttons[i].id !== id) {
+                            buttons[i].classList.remove('selected');
+                        }
+                    }
+                }
+        }
+        
+        var data = {
+        id: id,
+        text1: document.querySelector('.text1').textContent,
+        text2: document.querySelector('.text2').textContent,
+        text3: document.querySelector('.text3').textContent
+      };
+      switch (id) {
+        case 'sp13':
+          data.text1 = "กะเพรากับข้าวเผ็ดน้อย";
+          break;
+        case 'sp14':
+          data.text1 = "กะเพรากับข้าวเผ็ดกลาง";
+          break;
+        case 'sp15':
+          data.text1 = "กะเพรากับข้าวเผ็ดมาก";
+          break;
+      }
+    }
+    function addToCart5() {
+            var selectedText = "";
+
+            if (document.getElementById('sp13').classList.contains('selected')) {
+                selectedText = "กะเพรากับข้าว 打拋單點 (เผ็ดน้อย)";
+            } else if (document.getElementById('sp14').classList.contains('selected')) {
+                selectedText = "กะเพรากับข้าว 打拋單點 (เผ็ดกลาง)";
+            } else if (document.getElementById('sp15').classList.contains('selected')) {
+                selectedText = "กะเพรากับข้าว 打拋單點 (เผ็ดมาก)";
+            } else if (!document.getElementById('sp13').classList.contains('selected') && 
+                       !document.getElementById('sp14').classList.contains('selected') && 
+                       !document.getElementById('sp15').classList.contains('selected')) {
+                selectedText = "กะเพรากับข้าว 打拋單點";
+            }
+
+            var data = {
+                text1: selectedText,
+                quantity: 1,
+                price: 150
+            };
+
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var itemExists = false;
+
+            for (var i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].text1 === data.text1) {
+                    cartItems[i].quantity += 1;
+                    cartItems[i].price += 150;
+                    itemExists = true;
+                    break;
+                }
+            }
+
+            if (!itemExists) {
+                cartItems.push(data);
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            console.log('Item added to cart:', selectedText);
+
+            // Remove red border
+            var buttons = document.querySelectorAll('.sp13, .sp14, .sp15');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('selected');
+            }
+        }
+</script>
+
+<img src="BG.jpg" class="background" alt="Background">
+</body>
+</html>
+
+  
+

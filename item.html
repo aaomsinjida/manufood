@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>item</title>
+<link rel="stylesheet" href="item.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="box3">C A R T&nbsp;&nbsp;&nbsp;I T E M</div>
+    <img src="cart.png" alt="Cart" class="cart-icon">
+    <span class="box-text">C A R T   I T E M</span>
+    
+    <div class="square-container">
+        <div class="square1">
+            <span>NAME</span><br>
+            <div class="item-name" id="cart-items"></div>
+        </div>
+        <div class="square2">
+            <span>QUANTITY</span><br>
+            <div class="item-quantity" id="cart-quantities"></div>
+            <div class="total-quantity red-text">
+                <span class="Totalq">Total:   </span><span id="total-quantity">0</span>
+            </div>
+        </div>
+        <div class="square3">
+            <span>PRICE</span><br>
+            <div class="item-price" id="cart-prices"></div>
+            <div class="total-price red-text">
+                <span class="Totalp">Total:   </span><span id="total-price">0</span>
+            </div>
+            <button class="print" id="print-button">PRINT</button>
+        </div>
+    <button class="clear" id="clear-button">CLEAR</button>
+    <a href="index.html" class="home">H O M E</a>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        var cartItemsContainer = document.getElementById('cart-items');
+        var cartQuantitiesContainer = document.getElementById('cart-quantities');
+        var cartPricesContainer = document.getElementById('cart-prices');
+        var totalQuantity = 0;
+        var totalPrice = 0;
+
+        cartItems.forEach(function(item) {
+            var itemElement = document.createElement('div');
+            itemElement.className = 'item';
+            itemElement.textContent = item.text1;
+            cartItemsContainer.appendChild(itemElement);
+
+            var quantityElement = document.createElement('div');
+            quantityElement.className = 'item';
+            quantityElement.textContent = item.quantity;
+            cartQuantitiesContainer.appendChild(quantityElement);
+
+            var priceElement = document.createElement('div');
+            priceElement.className = 'item';
+            priceElement.textContent = item.price;
+            cartPricesContainer.appendChild(priceElement);
+
+            totalQuantity += parseInt(item.quantity);
+            totalPrice += parseFloat(item.price);
+        });
+
+        document.getElementById('total-quantity').textContent = totalQuantity;
+        document.getElementById('total-price').textContent = totalPrice.toFixed(1);
+
+        if (cartItems.length === 0) {
+            var noItemsElement = document.createElement('div');
+            noItemsElement.className = 'item';
+            noItemsElement.textContent = 'No item selected';
+            cartItemsContainer.appendChild(noItemsElement);
+
+            var noQuantitiesElement = document.createElement('div');
+            noQuantitiesElement.className = 'item';
+            noQuantitiesElement.textContent = '0';
+            cartQuantitiesContainer.appendChild(noQuantitiesElement);
+
+            var noPricesElement = document.createElement('div');
+            noPricesElement.className = 'item';
+            noPricesElement.textContent = '0';
+            cartPricesContainer.appendChild(noPricesElement);
+        }
+
+        document.getElementById('clear-button').addEventListener('click', function() {
+        localStorage.removeItem('cartItems');
+        window.location.reload();  // Reload the page to update the displayed items
+    });
+
+    document.getElementById('print-button').addEventListener('click', function() {
+            window.location.href = "bill.html"; // Redirect to bill.html when clicking the PRINT button
+        });
+    });
+</script>
+<img src="BG.jpg" class="background" alt="Background">
+</body>
+</html>

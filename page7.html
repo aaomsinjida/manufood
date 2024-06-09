@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page 7</title>
+<link rel="stylesheet" href="page7.css"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="menu">อื่นๆ 其他</div>
+    <a href="page1.html" class="box">กะเพรา 打拋</a>
+    <a href="page2.html" class="box">ผัดไทย 河粉</a>
+    <a href="page3.html" class="box">ข้าวผัด 炒飯</a>
+    <a href="page4.html" class="box">น้ำซุป 湯</a>
+    <a href="page5.html" class="box">ผัด/ทอด 熱炒</a>
+    <a href="page6.html" class="box">ยำ 涼拌</a>
+    <div class="box1">อื่นๆ 其他</div>
+    <a href="index.html" class="home">H O M E</a>
+    <a href="item.html" class="box3">
+        <img src="cart.png" alt="Cart" class="cart-icon">
+        <span class="box-text">I T E M</span>
+    </a>
+    <div class="box4">
+        <div class="text-container"></div>
+            <span id="sp1" class="text1">ไข่ดาว</span>
+            <span id="sp2" class="text2">荷包蛋</span>
+            <span id="sp3" class="text3">Price : 15</span>
+            <a class="box5" id="add-button" onclick="addToCart('ไข่ดาว 荷包蛋', 15)">
+                <img src="cart.png" alt="Cart" class="cart-icon">
+                <span class="box-text">A D D</span>
+            </a> 
+        </div>
+
+    <div class="box6">
+        <div class="text-container"></div>
+            <span id="sp1" class="text1">ข้าวสวย</span>
+            <span id="sp2" class="text2">白飯</span>
+            <span id="sp3" class="text3">Price : 15</span>
+            <a class="box5" id="add-button"onclick="addToCart2('ข้าวสวย 白飯', 15)">
+                <img src="cart.png" alt="Cart" class="cart-icon">
+                <span class="box-text">A D D</span>
+            </a> 
+        </div>
+    </div>
+</div>
+<img src="BG.jpg" class="background" alt="Background">
+
+<script>
+    function addToCart(itemName, itemPrice) {
+        var selectedText = itemName;
+
+        if (!document.getElementById('sp1').classList.contains('selected') && 
+            !document.getElementById('sp2').classList.contains('selected') && 
+            !document.getElementById('sp3').classList.contains('selected')) {
+            selectedText = "ไข่ดาว 荷包蛋";
+            itemPrice = 15;
+        }
+
+        var data = {
+            text1: selectedText,
+            quantity: 1,
+            price: itemPrice
+        };
+
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        var itemExists = false;
+
+        for (var i = 0; i < cartItems.length; i++) {
+            if (cartItems[i].text1 === data.text1) {
+                cartItems[i].quantity += 1;
+                cartItems[i].price += itemPrice;
+                itemExists = true;
+                break;
+            }
+        }
+
+        if (!itemExists) {
+            cartItems.push(data);
+        }
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        console.log('Item added to cart:', selectedText);
+    }
+    
+    function addToCart2(itemName, itemPrice) {
+        var selectedText = itemName;
+
+        if (!document.getElementById('sp1').classList.contains('selected') && 
+            !document.getElementById('sp2').classList.contains('selected') && 
+            !document.getElementById('sp3').classList.contains('selected')) {
+            selectedText = "ข้าวสวย 白飯";
+            itemPrice = 15;
+        }
+
+        var data = {
+            text1: selectedText,
+            quantity: 1,
+            price: itemPrice
+        };
+
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        var itemExists = false;
+
+        for (var i = 0; i < cartItems.length; i++) {
+            if (cartItems[i].text1 === data.text1) {
+                cartItems[i].quantity += 1;
+                cartItems[i].price += itemPrice;
+                itemExists = true;
+                break;
+            }
+        }
+
+        if (!itemExists) {
+            cartItems.push(data);
+        }
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        console.log('Item added to cart:', selectedText);
+    }
+</script>
+
+</body>
+</html>
+
+  
+

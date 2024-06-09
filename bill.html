@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bill</title>
+<link rel="stylesheet" href="bill.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>ร้านอาหาร ครัวสองแคว</h1>
+        <hr>
+    </div>
+    <div class="order-details" id="order-details">
+        <h2>รายการอาหาร</h2>
+    </div>
+    <div class="total" id="total">
+        <p>รวมทั้งสิ้น: <span id="total-items">0</span> รายการ</p>
+        <p>ยอดรวมทั้งหมด: <span id="total-price">฿0.00</span></p>
+        <hr>
+    </div>
+    <div class="footer">
+        <button onclick="window.print()">PRINT</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        var orderDetailsContainer = document.getElementById('order-details');
+        var totalItemsElement = document.getElementById('total-items');
+        var totalPriceElement = document.getElementById('total-price');
+
+        var totalItems = 0;
+        var totalPrice = 0;
+
+        // เริ่มการสร้างบิล
+        menuItems.forEach(function(item) {
+            var menuItemElement = document.createElement('div');
+            menuItemElement.className = 'menu-item';
+
+            var itemNameElement = document.createElement('span');
+            itemNameElement.textContent = item.text1 + ' ';
+
+            var itemQuantityElement = document.createElement('span');
+            itemQuantityElement.textContent = 'x' + item.quantity + ' ';
+
+            var itemPriceElement = document.createElement('span');
+            itemPriceElement.textContent = item.price + ' บาท';
+
+            menuItemElement.appendChild(itemNameElement);
+            menuItemElement.appendChild(itemQuantityElement);
+            menuItemElement.appendChild(itemPriceElement);
+
+            orderDetailsContainer.appendChild(menuItemElement);
+
+            // นับรวมจำนวนรายการและยอดรวม
+            totalItems += parseInt(item.quantity);
+            totalPrice += parseFloat(item.price) * parseInt(item.quantity);
+        });
+
+        // แสดงจำนวนรวมรายการและยอดรวม
+        totalItemsElement.textContent = totalItems;
+        totalPriceElement.textContent = '฿' + totalPrice.toFixed(2);
+    });
+</script>
+
+</body>
+</html>

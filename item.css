@@ -1,0 +1,181 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin-top: 140px;
+    margin-bottom: 50px;
+  }
+
+  .box3 {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    background-image: linear-gradient(to right, #ff2200, #ff7b00);
+    border: 5px solid #ffffff;
+    display: flex;
+    justify-content: right;
+    padding-right: 25px;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width:20vw; 
+    height: 9vh;
+    font-size: 2.2vw; 
+    color: #ffffff;
+    text-align: left;
+    border-radius: 2vw; 
+    font-family: Impact, fantasy;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .cart-icon {
+    position: absolute;
+    top: 53px;
+    left: 80px;
+    margin-right: 1vw; /* ปรับช่องว่างระหว่างภาพกับข้อความ */
+    height: 3em; /* ปรับขนาดของภาพให้เข้ากับข้อความ */
+  }
+
+  .box3:hover {
+    background-color: rgb(255, 220, 0);
+  }
+
+  .home {
+    position: absolute;
+    top: 73vh;
+    left: 5vw;
+    display: flex; /* ใช้ Flexbox */
+    margin-right: 50%;
+    font-size: 30px;
+    font-family: Impact, fantasy;
+    font-weight: 100;
+    color: #ffffff;
+
+  }
+
+  .square-container {
+    display: inline-block; /* Allow squares to sit next to each other */
+    position: relative; /* Ensure the container positions relative */
+    text-align: center;
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5vw; /* ปรับขนาดตัวอักษรให้เท่ากับ 5% ของขนาดหน้าจอ */
+    color: #000000;
+
+  }
+
+  .square1 {
+    position: relative; /* Enable absolute positioning inside relative container */
+    top:-9vh; /* Adjust the top position as needed */
+    left: 0vw; /* Adjust the left position as needed */
+    width: 60vh; /* Adjust width as needed */
+    height: 68vh; /* Adjust height as needed */
+    background-color: #d3c4c4; /* Set background color */
+    display: inline-block; /* Make squares inline-block elements */
+    border-radius: 2vw; /* ปรับขนาดของเส้นมนของกล่องให้เท่ากับ 2% ของขนาดหน้าจอ */
+  }
+  .square2 {
+    position: relative; /* Enable absolute positioning inside relative container */
+    top:-2vh; /* Adjust the top position as needed */
+    left: 0vw; /* Adjust the left position as needed */
+    width: 30vh; /* Adjust width as needed */
+    height: 68vh; /* Adjust height as needed */
+    background-color: #d3c4c4; /* Set background color */
+    display: inline-block; /* Make squares inline-block elements */
+    border-radius: 2vw; /* ปรับขนาดของเส้นมนของกล่องให้เท่ากับ 2% ของขนาดหน้าจอ */
+  }
+  .square3 {
+    position: relative; /* Enable absolute positioning inside relative container */
+    top:3.5vh; /* Adjust the top position as needed */
+    left: 0vw; /* Adjust the left position as needed */
+    width: 30vh; /* Adjust width as needed */
+    height: 68vh; /* Adjust height as needed */
+    background-color: #d3c4c4; /* Set background color */
+    display: inline-block; /* Make squares inline-block elements */
+    border-radius: 2vw; /* ปรับขนาดของเส้นมนของกล่องให้เท่ากับ 2% ของขนาดหน้าจอ */
+  }
+
+  .square1 span, .square2 span, .square3 span {
+    margin-top: 10px;
+}
+
+  .item-name, .item-quantity, .item-price {
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-size: 2.3vw; /* ปรับขนาดตัวอักษร */
+    color: #f39410;
+    margin-top: 10px;
+  }
+
+  .clear{
+    font-size: 30px;
+    font-family: Impact, fantasy;
+    font-weight: 100;
+    color: #070101;
+    border: none; /* ลบกรอบสี่เหลี่ยม */
+    outline: none; /* ลบกรอบสี่เหลี่ยม */
+}
+
+  .clear:hover {
+    background-color: darkred;
+}
+
+.total-quantity, .total-price {
+  display: flex;
+  justify-content: flex-start;
+  width: 45%;
+  text-align: center;
+  margin-top: 0;
+  position: relative;
+  border-top: 1px solid #ccc;
+}
+.total-quantity span:last-child, .total-price span:last-child {
+  margin-left: 10px; /* Adjust this value to increase or decrease the space */
+}
+.Totalq, .Totalp {
+  font-family: "Mitr", sans-serif;
+  font-weight: 600;
+  font-size: 2.3vw; /* ปรับขนาดตัวอักษร */
+  margin-left: 30px;
+  position: absolute;
+}
+ 
+#total-quantity, #total-price {
+  margin-left: 100px; /* Adjust this value to set the space between Total text and the number */
+}
+.red-text {
+  color: red;
+}
+
+.print{
+  font-size: 30px;
+  font-family: Impact, fantasy;
+  font-weight: 100;
+  color: red;
+  border: none; /* ลบกรอบสี่เหลี่ยม */
+  outline: none; /* ลบกรอบสี่เหลี่ยม */
+}
+
+.print:hover {
+  background-color: darkred;
+}

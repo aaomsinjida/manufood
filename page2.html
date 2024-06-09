@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page 2</title>
+<link rel="stylesheet" href="page2.css"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="menu">ผัดไทย 河粉</div>
+    <a href="page1.html" class="box">กะเพรา 打拋</a>
+    <div class="box1">ผัดไทย 河粉</div>
+    <a href="page3.html" class="box">ข้าวผัด 炒飯</a>
+    <a href="page4.html" class="box">น้ำซุป 湯</a>
+    <a href="page5.html" class="box">ผัด/ทอด 熱炒</a>
+    <a href="page6.html" class="box">ยำ 涼拌</a>
+    <a href="page7.html" class="box">อื่นๆ 其他</a>
+    <a href="index.html" class="home">H O M E</a>
+    <a href="item.html" class="box3">
+        <img src="cart.png" alt="Cart" class="cart-icon">
+        <span class="box-text">I T E M</span>
+    </a>
+    <div class="box4">
+        <div class="text-container"></div>
+            <span class="text1">ผัดไทยหมู</span>
+            <span class="text2">豬肉炒河粉</span>
+            <span class="text3">Price : 110</span>
+            <div class="sp1" id="sp1" onclick="selectIcon('sp1')">
+                <img src="sp1.png" class="sp1-icon">
+            </div>
+            <div class="sp2" id="sp2" onclick="selectIcon('sp2')">
+                <img src="sp2.png" class="sp2-icon">
+            </div>
+            <div class="sp3" id="sp3" onclick="selectIcon('sp3')">
+                <img src="sp3.png" class="sp3-icon">
+            </div>
+            <a class="box5" id="add-button"onclick="addToCart()">
+                <img src="cart.png" alt="Cart" class="cart-icon">
+                <span class="box-text">A D D</span>
+            </a> 
+        </div>
+
+    <div class="box6">
+        <div class="text-container"></div>
+            <span class="text1">ผัดไทยไก่</span>
+            <span class="text2">雞肉炒河粉 </span>
+            <span class="text3">Price : 110</span>
+            <div class="sp4" id="sp4" onclick="selectIcon2('sp4')">
+                <img src="sp1.png" class="sp4-icon">
+            </div>
+            <div class="sp5" id="sp5" onclick="selectIcon2('sp5')">
+                <img src="sp2.png" class="sp5-icon">
+            </div>
+            <div class="sp6" id="sp6" onclick="selectIcon2('sp6')">
+                <img src="sp3.png" class="sp6-icon">
+            </div>
+            <a class="box5" id="add-button"onclick="addToCart2()">
+                <img src="cart.png" alt="Cart" class="cart-icon">
+                <span class="box-text">A D D</span>
+            </a> 
+        </div>
+    </div>
+
+    <div class="box7">
+        <div class="text-container"></div>
+            <span class="text1">ผัดไทยกุ้งสด</span>
+            <span class="text2">鮮蝦炒河粉</span>
+            <span class="text3">Price : 120</span>
+            <div class="sp7" id="sp7" onclick="selectIcon3('sp7')">
+                <img src="sp1.png" class="sp7-icon">
+            </div>
+            <div class="sp8" id="sp8" onclick="selectIcon3('sp8')">
+                <img src="sp2.png" class="sp8-icon">
+            </div>
+            <div class="sp9" id="sp9" onclick="selectIcon3('sp9')">
+                <img src="sp3.png" class="sp9-icon">
+            </div>
+            <a class="box5" id="add-button"onclick="addToCart3()">
+                <img src="cart.png" alt="Cart" class="cart-icon">
+                <span class="box-text">A D D</span>
+            </a> 
+        </div>
+        
+    <div class="box8">
+        <div class="text-container"></div>
+            <span class="text1">ผัดไทยทะเล</span>
+            <span class="text2">海鮮炒河粉</span>
+            <span class="text3">Price : 130</span>
+            <div class="sp10" id="sp10" onclick="selectIcon4('sp10')">
+                <img src="sp1.png" class="sp10-icon">
+            </div>
+            <div class="sp11" id="sp11" onclick="selectIcon4('sp11')">
+                <img src="sp2.png" class="sp11-icon">
+            </div>
+            <div class="sp12" id="sp12" onclick="selectIcon4('sp12')">
+                <img src="sp3.png" class="sp12-icon">
+            </div>
+            <a class="box5" id="add-button"onclick="addToCart4()">
+                <img src="cart.png" alt="Cart" class="cart-icon">
+                <span class="box-text">A D D</span>
+            </a> 
+        </div>
+</div>
+<script>
+    function selectIcon(id) {
+            // ตรวจสอบว่าปุ่มที่กดคือ SP1, SP2 หรือ SP3
+            if (id === 'sp1' || id === 'sp2' || id === 'sp3') {
+                // ตรวจสอบว่าปุ่มที่กดมีคลาส selected อยู่หรือไม่
+                if (document.getElementById(id).classList.contains('selected')) {
+                // ลบกรอบสีแดงจากปุ่มที่กด
+                document.getElementById(id).classList.remove('selected');
+                } else {
+                // เพิ่มคลาส selected ให้กับปุ่มที่กด
+                document.getElementById(id).classList.add('selected');
+                var buttons = document.querySelectorAll('.sp1, .sp2, .sp3');
+                            for (var i = 0; i < buttons.length; i++) {
+                                if (buttons[i].id !== id) {
+                                    buttons[i].classList.remove('selected');
+                                }
+                            }
+                        }
+            
+                var data = {
+                id: id,
+                text1: document.querySelector('.text1').textContent,
+                text2: document.querySelector('.text2').textContent,
+                text3: document.querySelector('.text3').textContent
+            };
+            // ปรับแต่งข้อมูล "text1" สำหรับ SP1
+            switch (id) {
+                case 'sp1':
+                data.text1 = "ผัดไทยหมูเผ็ดน้อย";
+                break;
+                case 'sp2':
+                data.text1 = "ผัดไทยหมูเผ็ดกลาง";
+                break;
+                case 'sp3':
+                data.text1 = "ผัดไทยหมูเผ็ดมาก";
+                break;
+            }
+            }
+        }
+    function addToCart() {
+                var selectedText = "";
+
+                if (document.getElementById('sp1').classList.contains('selected')) {
+                    selectedText = "ผัดไทยหมู 豬肉炒河粉 (เผ็ดน้อย)";
+                } else if (document.getElementById('sp2').classList.contains('selected')) {
+                    selectedText = "ผัดไทยหมู 豬肉炒河粉 (เผ็ดกลาง)";
+                } else if (document.getElementById('sp3').classList.contains('selected')) {
+                    selectedText = "ผัดไทยหมู 豬肉炒河粉 (เผ็ดมาก)";
+                } else if (!document.getElementById('sp1').classList.contains('selected') && 
+                        !document.getElementById('sp2').classList.contains('selected') && 
+                        !document.getElementById('sp3').classList.contains('selected')) {
+                    selectedText = "ผัดไทยหมู 豬肉炒河粉";
+                }
+
+                var data = {
+                    text1: selectedText,
+                    quantity: 1,
+                    price: 110
+                };
+
+                var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                var itemExists = false;
+
+                for (var i = 0; i < cartItems.length; i++) {
+                    if (cartItems[i].text1 === data.text1) {
+                        cartItems[i].quantity += 1;
+                        cartItems[i].price += 110;
+                        itemExists = true;
+                        break;
+                    }
+                }
+
+                if (!itemExists) {
+                    cartItems.push(data);
+                }
+
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                console.log('Item added to cart:', selectedText);
+
+                // Remove red border
+                var buttons = document.querySelectorAll('.sp1, .sp2, .sp3');
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].classList.remove('selected');
+                }
+            }
+
+function selectIcon2(id) {
+        if (id === 'sp4' || id === 'sp5' || id === 'sp6') {
+            if (document.getElementById(id).classList.contains('selected')) {
+            document.getElementById(id).classList.remove('selected');
+            } else {
+            document.getElementById(id).classList.add('selected');
+            var buttons = document.querySelectorAll('.sp4, .sp5, .sp6');
+                        for (var i = 0; i < buttons.length; i++) {
+                            if (buttons[i].id !== id) {
+                                buttons[i].classList.remove('selected');
+                            }
+                        }
+                    }
+                }
+        
+            var data = {
+            id: id,
+            text1: document.querySelector('.text1').textContent,
+            text2: document.querySelector('.text2').textContent,
+            text3: document.querySelector('.text3').textContent
+        };
+        // ปรับแต่งข้อมูล "text1" สำหรับ SP1
+        switch (id) {
+            case 'sp4':
+            data.text1 = "ผัดไทยไก่เผ็ดน้อย";
+            break;
+            case 'sp5':
+            data.text1 = "ผัดไทยไก่เผ็ดกลาง";
+            break;
+            case 'sp6':
+            data.text1 = "ผัดไทยไก่เผ็ดมาก";
+            break;
+        }
+        }
+
+        function addToCart2() {
+            var selectedText = "";
+
+            if (document.getElementById('sp4').classList.contains('selected')) {
+                selectedText = "ผัดไทยไก่ 雞肉炒河粉 (เผ็ดน้อย)";
+            } else if (document.getElementById('sp5').classList.contains('selected')) {
+                selectedText = "ผัดไทยไก่ 雞肉炒河粉 (เผ็ดกลาง)";
+            } else if (document.getElementById('sp6').classList.contains('selected')) {
+                selectedText = "ผัดไทยไก่ 雞肉炒河粉 (เผ็ดมาก)";
+            } else if (!document.getElementById('sp4').classList.contains('selected') && 
+                       !document.getElementById('sp5').classList.contains('selected') && 
+                       !document.getElementById('sp6').classList.contains('selected')) {
+                selectedText = "ผัดไทยไก่ 雞肉炒河粉";
+            }
+
+            var data = {
+                text1: selectedText,
+                quantity: 1,
+                price: 110
+            };
+
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var itemExists = false;
+
+            for (var i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].text1 === data.text1) {
+                    cartItems[i].quantity += 1;
+                    cartItems[i].price += 110;
+                    itemExists = true;
+                    break;
+                }
+            }
+
+            if (!itemExists) {
+                cartItems.push(data);
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            console.log('Item added to cart:', selectedText);
+
+            // Remove red border
+            var buttons = document.querySelectorAll('.sp4, .sp5, .sp6');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('selected');
+            }
+        }
+
+function selectIcon3(id) {
+        if (id === 'sp7' || id === 'sp8' || id === 'sp9') {
+            if (document.getElementById(id).classList.contains('selected')) {
+            document.getElementById(id).classList.remove('selected');
+            } else {
+            document.getElementById(id).classList.add('selected');
+            var buttons = document.querySelectorAll('.sp7, .sp8, .sp9');
+                        for (var i = 0; i < buttons.length; i++) {
+                            if (buttons[i].id !== id) {
+                                buttons[i].classList.remove('selected');
+                            }
+                        }
+                    }
+            }
+            
+        
+            var data = {
+            id: id,
+            text1: document.querySelector('.text1').textContent,
+            text2: document.querySelector('.text2').textContent,
+            text3: document.querySelector('.text3').textContent
+        };
+
+        switch (id) {
+            case 'sp7':
+            data.text1 = "ผัดไทยกุ้งสดเผ็ดน้อย";
+            break;
+            case 'sp8':
+            data.text1 = "ผัดไทยกุ้งสดเผ็ดกลาง";
+            break;
+            case 'sp9':
+            data.text1 = "ผัดไทยกุ้งสดเผ็ดมาก";
+            break;
+        }
+        }
+        
+        function addToCart3() {
+            var selectedText = "";
+
+            if (document.getElementById('sp7').classList.contains('selected')) {
+                selectedText = "ผัดไทยกุ้งสด 鮮蝦炒河粉 (เผ็ดน้อย)";
+            } else if (document.getElementById('sp8').classList.contains('selected')) {
+                selectedText = "ผัดไทยกุ้งสด 鮮蝦炒河粉 (เผ็ดกลาง)";
+            } else if (document.getElementById('sp9').classList.contains('selected')) {
+                selectedText = "ผัดไทยกุ้งสด 鮮蝦炒河粉 (เผ็ดมาก)";
+            } else if (!document.getElementById('sp7').classList.contains('selected') && 
+                       !document.getElementById('sp8').classList.contains('selected') && 
+                       !document.getElementById('sp9').classList.contains('selected')) {
+                selectedText = "ผัดไทยกุ้งสด 鮮蝦炒河粉";
+            }
+
+            var data = {
+                text1: selectedText,
+                quantity: 1,
+                price: 120
+            };
+
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var itemExists = false;
+
+            for (var i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].text1 === data.text1) {
+                    cartItems[i].quantity += 1;
+                    cartItems[i].price += 120;
+                    itemExists = true;
+                    break;
+                }
+            }
+
+            if (!itemExists) {
+                cartItems.push(data);
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            console.log('Item added to cart:', selectedText);
+
+            // Remove red border
+            var buttons = document.querySelectorAll('.sp7, .sp8, .sp9');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('selected');
+            }
+        }
+
+    
+function selectIcon4(id) {
+        if (id === 'sp10' || id === 'sp11' || id === 'sp12') {
+            if (document.getElementById(id).classList.contains('selected')) {
+            document.getElementById(id).classList.remove('selected');
+            } else {
+            document.getElementById(id).classList.add('selected');
+            var buttons = document.querySelectorAll('.sp10, .sp11, .sp12');
+                        for (var i = 0; i < buttons.length; i++) {
+                            if (buttons[i].id !== id) {
+                                buttons[i].classList.remove('selected');
+                            }
+                        }
+                    }
+            }
+        
+        var data = {
+        id: id,
+        text1: document.querySelector('.text1').textContent,
+        text2: document.querySelector('.text2').textContent,
+        text3: document.querySelector('.text3').textContent
+    };
+    switch (id) {
+        case 'sp10':
+        data.text1 = "ผัดไทยทะเลเผ็ดน้อย";
+        break;
+        case 'sp11':
+        data.text1 = "ผัดไทยทะเลเผ็ดกลาง";
+        break;
+        case 'sp12':
+        data.text1 = "ผัดไทยทะเลเผ็ดมาก";
+        break;
+    }
+    }
+
+    function addToCart4() {
+            var selectedText = "";
+
+            if (document.getElementById('sp10').classList.contains('selected')) {
+                selectedText = "ผัดไทยทะเล 海鮮炒河粉 (เผ็ดน้อย)";
+            } else if (document.getElementById('sp11').classList.contains('selected')) {
+                selectedText = "ผัดไทยทะเล 海鮮炒河粉 (เผ็ดกลาง)";
+            } else if (document.getElementById('sp12').classList.contains('selected')) {
+                selectedText = "ผัดไทยทะเล 海鮮炒河粉 (เผ็ดมาก)";
+            } else if (!document.getElementById('sp10').classList.contains('selected') && 
+                       !document.getElementById('sp11').classList.contains('selected') && 
+                       !document.getElementById('sp12').classList.contains('selected')) {
+                selectedText = "ผัดไทยทะเล 海鮮炒河粉";
+            }
+
+            var data = {
+                text1: selectedText,
+                quantity: 1,
+                price: 130
+            };
+
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var itemExists = false;
+
+            for (var i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].text1 === data.text1) {
+                    cartItems[i].quantity += 1;
+                    cartItems[i].price += 130;
+                    itemExists = true;
+                    break;
+                }
+            }
+
+            if (!itemExists) {
+                cartItems.push(data);
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            console.log('Item added to cart:', selectedText);
+
+            // Remove red border
+            var buttons = document.querySelectorAll('.sp10, .sp11, .sp12');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('selected');
+            }
+        }
+
+</script>
+<img src="BG.jpg" class="background" alt="Background">
+</body>
+</html>
+
+  
+
